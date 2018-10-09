@@ -4,13 +4,13 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
-        android:contentDescription="@string/desc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/imagenView"
-        android:src="@drawable/uno"
-        android:layout_marginTop="5dp"
+        android:layout_width="147dp"
+        android:layout_height="140dp"
         android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:contentDescription="@string/desc"
+        android:src="@drawable/uno"
 
         />
 
@@ -18,9 +18,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@id/imagenView"
-        android:layout_marginTop="20dp"
-        android:layout_centerHorizontal="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="148dp"
+        android:layout_marginTop="57dp"
         android:text="New Text" />
 
 </RelativeLayout>

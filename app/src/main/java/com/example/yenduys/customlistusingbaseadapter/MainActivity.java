@@ -4,24 +4,22 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
-
-    ListView lv;
-
-    int icon [] = {R.drawable.uno , R.drawable.dos};
-
-    String numbers []= {"Yenduy "," natalia"};
-
+    ArrayList<Product> products = new ArrayList<Product>();
+    CustomBaseAdapter CustomAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lv = (ListView) findViewById(R.id.ListView);
+        products.add(new Product("Product Title", "Caption", R.drawable.uno));
+        CustomAdapter = new CustomBaseAdapter(this, products);
 
-        lv.setAdapter(new CustomAdapter(MainActivity.this, icon , numbers));
-
+        ListView listViewMain = (ListView) findViewById(R.id.ListView_Main);
+        listViewMain.setAdapter(CustomAdapter);
     }
 }
